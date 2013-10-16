@@ -2,10 +2,10 @@
 
 one:
   user_id: 1
-  pledgelevel_id: 1
+  pledge_level_id: 1
   status: MyText
 
 two:
   user_id: 1
-  pledgelevel_id: 1
+  pledge_level_id: 1
   status: MyText
