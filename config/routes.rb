@@ -1,6 +1,5 @@
 LateStarter::Application.routes.draw do
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
-  resources :users
+  devise_for :users
   resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,7 +7,7 @@ LateStarter::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root :to => 'home#index'
+    root :to => 'home#index'
   # root'layouts#application'
 
   resources :campaigns do 
