@@ -1,4 +1,6 @@
-
+<% content_for :title do %>
+The Campaign of Your Life
+<% end %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,17 +25,12 @@
         <div class="navbar-inner">
           <div class="container">
             <a href="index.html" class="brand brand-bootbus">Create Your Campaign</a>
-            <% content_for :title do %>
-              Create a Campaign
-              <% end %>
-
-              <p>Create a New Campaign</p>
 
               <%= simple_form_for @campaign, :html => {:class => 'form-horizontal' } do |f| %>
-              <%= f.input :name %>
-              <%= f.input :description %>
-              <%= f.input :goal %>
-              <%= f.button :submit %>
+                <%= f.input :name %>
+                <%= f.input :description %>
+                <%= f.input :goal %>
+                <%= f.button :submit %>
             <% end %>
             <!-- Below button used for responsive navigation -->
             <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -46,10 +43,10 @@
       </div>
     </header>
        <!-- Start: FOOTER -->
-    <footer>
+    <!-- <footer>
       <div class="container">
-        <div class="row">
-          <div class="span2">
+        <div class="row"> -->
+          <!-- <div class="span2">
           <div class="span2">
             <h4><i class="icon-beaker icon-white"></i> About</h4>
             <nav>
@@ -98,17 +95,16 @@
           </div>
         </div>
       </div>
-      <hr class="footer-divider">
-      <div class="container">
+      <hr class="footer-divider"> -->
+     <!--  <div class="container">
         <p>
           &copy; 2013-3000 LateStarter, Inc. All Rights Reserved.
         </p>
       </div>
-    </footer>
+    </footer> -->
     <!-- End: FOOTER -->
     <%= javascript_include_tag "boot-business" %>
     <%= javascript_include_tag "bootstrap.min" %>
     <%= javascript_include_tag "jquery.min" %>
   </body>
 </html>
->>>>>>> 9f6f33e46f7cf78cb62cb96ee751651091b1d349

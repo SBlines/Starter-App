@@ -10,11 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps
     end
   end
+   #devise :database_authenticatable, :registerable, :confirmable, :recoverable, :stretches => 20
 
-<<<<<<< HEAD
-#   devise :database_authenticatable, :registerable, :confirmable, :recoverable, :stretches => 20
-=======
-    # devise :database_authenticatable, :registerable, :confirmable, :recoverable, :stretches => 20
->>>>>>> d5f172ff3289fb2c9168f4ae64f424ebe2580013
 
 end
