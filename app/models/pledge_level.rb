@@ -1,4 +1,5 @@
 class PledgeLevel < ActiveRecord::Base
+  resourcify
 	validates :description, prescence: true
 	validates :amount, presence: true
 
