@@ -36,5 +36,6 @@ class CampaignsController < ApplicationController
       @campaign = Campaign.find(params[:id])
     rescue
       @campaign = Campaign.first
+    end
   end
 end

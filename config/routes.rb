@@ -4,9 +4,12 @@ LateStarter::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root :to => 'home#index'
+  # root'layouts#application'
+
   resources :campaigns
 
-  root'campaigns#show'
+
 
 
   # Example of regular route:
@@ -43,7 +46,7 @@ LateStarter::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

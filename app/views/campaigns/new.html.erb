@@ -1,0 +1,110 @@
+
+<%= simple_form_for @campaign do |f| %>
+  <%= f.input :name, :wrapper => :prepend, :label => false do
+    content_tag :span, "Name", :class => "add-on"
+    f.input_field :name
+  end %>
+  <%= f.button :submit %>
+<% end %>
+
+<!-- f.input :description, placeholder: 'Tell us why you are creating a campaign.' -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LateStarter | Campaigns for your monetary needs.">
+    <title>LateStarter | Collecting funds for you dreams!</title>
+    <!-- Bootstrap -->
+    <%= stylesheet_link_tag  "boot-business", :media => "all" %>
+    <%= stylesheet_link_tag  "bootstrap-responsive", :media => "all" %>
+    <%= stylesheet_link_tag  "bootstrap-responsive.min", :media => "all" %>
+    <%= stylesheet_link_tag  "bootstrap", :media => "all" %>
+    <%= stylesheet_link_tag  "bootstrap.min", :media => "all" %>
+    <%= stylesheet_link_tag  "font-awesome", :media => "all" %>
+    <%= stylesheet_link_tag  "font-awesome-ie7", :media => "all" %>
+  </head>
+  <body>
+    <!-- Start: HEADER -->
+    <header>
+      <!-- Start: Navigation wrapper -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="index.html" class="brand brand-bootbus">Create Your Campaign</a>
+            <!-- Below button used for responsive navigation -->
+            <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </header>
+       <!-- Start: FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span2">
+          <div class="span2">
+            <h4><i class="icon-beaker icon-white"></i> About</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="our_works.html">Our works</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              <ul>
+            </nav>
+          </div>
+          <div class="span2">
+            <h4><i class="icon-thumbs-up icon-white"></i> Support</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+              </ul>
+            </nav>
+            <h4><i class="icon-legal icon-white"></i> Legal</h4>
+            <nav>
+              <ul class="quick-links">
+                <li><a href="#">License</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Security</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="span3">
+            <h4>Get in touch</h4>
+            <div class="social-icons-row">
+              <a href="#"><i class="icon-twitter"></i></a>
+              <a href="#"><i class="icon-facebook"></i></a>
+              <a href="#"><i class="icon-linkedin"></i></a>
+            </div>
+            <div class="social-icons-row">
+              <a href="#"><i class="icon-google-plus"></i></a>
+              <a href="#"><i class="icon-github"></i></a>
+              <a href="mailto:soundar.imon.stevenson@gmail.com"><i class="icon-envelope"></i></a>
+            </div>
+            <div class="social-icons-row">
+              <i class="icon-phone icon-large phone-number"></i> +919755527877
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="container">
+        <p>
+          &copy; 2013-3000 LateStarter, Inc. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- End: FOOTER -->
+    <%= javascript_include_tag "boot-business" %>
+    <%= javascript_include_tag "bootstrap.min" %>
+    <%= javascript_include_tag "jquery.min" %>
+  </body>
+</html>
