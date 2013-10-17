@@ -1,0 +1,10 @@
+<% content_for :title do %>
+	Create Pledge Level for <% @campaign.name %>
+<% end %>
+
+
+  <%= simple_form_for [@campaign, @pledge_level], :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :description %>
+    <%= f.input :amount %>
+    <%= f.button :submit %>
+<% end %>

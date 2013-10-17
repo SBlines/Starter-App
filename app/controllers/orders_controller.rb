@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
 	def new
+		@campaign = Campaign.find(params[:campaign_id])
+		@pledge_level = PledgeLevel.find(params[:id])
 		@order = Order.new
 	end
 
@@ -8,6 +10,8 @@ class OrdersController < ApplicationController
 	end
 
 	def create
+		@campaign = Campaign.find(params[:campaign_id])
+		@pledge_level = PledgeLevel.find(params[:id])
 		@porder = Order.new(order)
 
 		if @order.save
@@ -18,6 +22,8 @@ class OrdersController < ApplicationController
 	end
 
 	def update
+		@campaign = Campaign.find(params[:campaign_id])
+		@pledge_level = PledgeLevel.find(params[:id])
 		@order = Order.find(params[:id])
 
 		if @order.update_attributes(order)
@@ -28,10 +34,14 @@ class OrdersController < ApplicationController
 	end
 
 	def edit
+		@campaign = Campaign.find(params[:campaign_id])
+		@pledge_level = PledgeLevel.find(params[:id])
 		@order = Order.find(params[:id])
 	end
 
 	def show
+		@campaign = Campaign.find(params[:campaign_id])
+		@pledge_level = PledgeLevel.find(params[:id])
 		@order = Order.find(params[:id])
 	end
 end

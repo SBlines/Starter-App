@@ -6,8 +6,8 @@ Create Order
 
 <p>Create an Order</p>
 
-<%= simple_form_for @order, :html => {:class => 'form-horizontal' } do |f| %>
-pledge_level_params
+<%= simple_form_for [@campaign, @pledge_level, @order], :html => {:class => 'form-horizontal' } do |f| %>
+#pledge_level_params
 	
 <%= f.input :pledge_level_id %>
 <script

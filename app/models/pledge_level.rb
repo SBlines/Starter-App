@@ -1,6 +1,6 @@
 class PledgeLevel < ActiveRecord::Base
   resourcify
-	validates :description, prescence: true
+	validates :description, presence: true
 	validates :amount, presence: true
 
 	belongs_to :campaign

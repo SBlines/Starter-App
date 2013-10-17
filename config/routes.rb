@@ -11,8 +11,11 @@ LateStarter::Application.routes.draw do
   root :to => 'home#index'
   # root'layouts#application'
 
-  resources :campaigns
-  resources :pledge_levels
+  resources :campaigns do 
+    resources :pledge_levels do
+      resources :orders
+  end
+end
 
 
 
