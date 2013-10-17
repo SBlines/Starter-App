@@ -11,6 +11,6 @@ class CreateUsers < ActiveRecord::Migration
     end
   end
 
-   devise :database_authenticatable, :registerable, :confirmable, :recoverable, :stretches => 20
+   #devise :database_authenticatable, :registerable, :confirmable, :recoverable, :stretches => 20
 
 end
