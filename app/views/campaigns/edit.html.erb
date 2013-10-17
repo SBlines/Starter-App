@@ -1,0 +1,12 @@
+<% content_for :title do %>
+Edit Campaign
+<% end %>
+
+<p>Edit Your Campaign</p>
+
+<%= simple_form_for @campaign, :html => {:class => 'form-horizontal' } do |f| %>
+	<%= f.input :name %>
+	<%= f.input :description %>
+	<%= f.input :goal %>
+	<%= f.button :submit %>
+	<% end %>

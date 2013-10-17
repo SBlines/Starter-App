@@ -1,13 +1,4 @@
 
-<%= simple_form_for @campaign do |f| %>
-  <%= f.input :name, :wrapper => :prepend, :label => false do
-    content_tag :span, "Name", :class => "add-on"
-    f.input_field :name
-  end %>
-  <%= f.button :submit %>
-<% end %>
-
-<!-- f.input :description, placeholder: 'Tell us why you are creating a campaign.' -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,6 +23,18 @@
         <div class="navbar-inner">
           <div class="container">
             <a href="index.html" class="brand brand-bootbus">Create Your Campaign</a>
+            <% content_for :title do %>
+              Create a Campaign
+              <% end %>
+
+              <p>Create a New Campaign</p>
+
+              <%= simple_form_for @campaign, :html => {:class => 'form-horizontal' } do |f| %>
+              <%= f.input :name %>
+              <%= f.input :description %>
+              <%= f.input :goal %>
+              <%= f.button :submit %>
+            <% end %>
             <!-- Below button used for responsive navigation -->
             <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
@@ -108,3 +111,4 @@
     <%= javascript_include_tag "jquery.min" %>
   </body>
 </html>
+>>>>>>> 9f6f33e46f7cf78cb62cb96ee751651091b1d349
