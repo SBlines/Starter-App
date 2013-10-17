@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 gem 'devise'
 gem 'rolify'
 gem 'cancan'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'awesome_print'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 
