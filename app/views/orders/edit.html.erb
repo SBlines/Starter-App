@@ -1,0 +1,12 @@
+<% content_for :title do %>
+<%= @campaign.name %>
+<%= @pledge_level.amount %>
+Edit Order
+<% end %>
+
+<p>Edit Order</p>
+
+<%= simple_form_for @order, :html => {:class => 'form-horizontal' } do |f| %>
+	<%= f.input :pledge_level_id %>
+	<%= f.button :submit %>
+	<% end %>

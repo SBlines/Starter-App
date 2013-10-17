@@ -3,7 +3,7 @@ class PledgeLevelsController < ApplicationController
 		@pledge_level = PledgeLevel.new
 	end
 
-	def pedge_level_params
+	def pledge_level_params
 		params.require(:pledge_level).permit(:description, :amount)
 	end
 

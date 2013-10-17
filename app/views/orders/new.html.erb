@@ -1,0 +1,23 @@
+<% content_for :title do %>
+<%= @campaign.name %>
+<%= @pledge_level.amount %>
+Create Order
+<% end %>
+
+<p>Create an Order</p>
+
+<%= simple_form_for @order, :html => {:class => 'form-horizontal' } do |f| %>
+pledge_level_params
+	
+<%= f.input :pledge_level_id %>
+<script
+  src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+  data-key="pk_test_Vdebzuelc8gH7tzexBGfau3S"
+  data-amount=<%= pledge_level_amount %>
+  data-name=<%= pledge_level_description %>
+  data-description=<%= pledge_level_description %>
+  data-currency="usd"
+  data-image="/128x128.png">
+</script>
+<%= f.button :submit %>
+<% end %>
