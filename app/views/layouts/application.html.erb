@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Late Starter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LateStarter | Campaigns for your monetary needs.">
+    <title>LateStarter | Collecting funds for you dreams!</title>
+    <!-- Bootstrap -->
     <%= stylesheet_link_tag  "boot-business", :media => "all" %>
     <%= stylesheet_link_tag  "bootstrap-responsive", :media => "all" %>
     <%= stylesheet_link_tag  "bootstrap-responsive.min", :media => "all" %>
@@ -9,35 +13,71 @@
     <%= stylesheet_link_tag  "bootstrap.min", :media => "all" %>
     <%= stylesheet_link_tag  "font-awesome", :media => "all" %>
     <%= stylesheet_link_tag  "font-awesome-ie7", :media => "all" %>
-    <%= csrf_meta_tags %>
+
   </head>
-
   <body>
-    <div id="wrapper">
-
-
-      <!-- Page content -->
-      <div id="page-content-wrapper">
-        <div class="content-header">
-          <h1>
-            <!-- <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a> -->
-            <%= content_for?(:title) ? yield(:title) : "" %>
-          </h1>
-        </div>
-        <!-- Keep all page content within the page-content inset div! -->
-        <div class="page-content inset">
-          <!-- <div class="row">
-            <div class="col-md-12">
-              <%= yield %>
+    <!-- Start: HEADER -->
+    <header>
+      <!-- Start: Navigation wrapper -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="index" class="brand brand-bootbus">LateStarter</a>
+            <!-- Below button used for responsive navigation -->
+            <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Start: Primary navigation -->
+            <div class="nav-collapse collapse">
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a href="index" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="our_works.html">Our works</a></li>
+                    <li><a href="patnerships.html">Parnerships</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                  </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact_us.html">Contact us</a></li>
+            <% if user_signed_in? %>
+              Logged in as <strong><%= current_user.email %></strong>.
+              <li><%= link_to "Edit profile", edit_user_registration_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path  %></li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+            <% end %>
+              </ul>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
-    </div>
-
-
+      <!-- End: Navigation wrapper -->
+    <!-- End: HEADER -->
+    <!-- Start: MAIN CONTENT -->
+        <div class=" content">
+          <%= yield %>
+        </div>
+    <!-- End: MAIN CONTENT -->
+    <!-- Start: FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2013-3000 LateStarter, Inc. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- End: FOOTER -->
     <%= javascript_include_tag "boot-business" %>
     <%= javascript_include_tag "bootstrap.min" %>
     <%= javascript_include_tag "jquery.min" %>
+
   </body>
 </html>
+
