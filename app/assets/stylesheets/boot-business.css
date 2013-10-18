@@ -141,7 +141,10 @@
   text-align: center;
 }
 .product-snap {
-  display: inline;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  ;
 }
 .article {
   font-size: 15px;
